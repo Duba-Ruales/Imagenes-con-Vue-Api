@@ -9,12 +9,12 @@
     <div class="container mt-5 ">
       <div class="row">
         <div class="col-12">
-          <br /><br />
-          <h2 class="text-center"> <b>CENTRO DE CONTROL</b> </h2><hr>
+          <br>
+          <h2 class="text-center mt-5"> <b> MENÚ PRINCIPAL </b> </h2><hr>
 
     <!-- Seleccionar imagen de Desktop  -->
           <input
-            class="btn btn-primary btn-block"
+            class="btn btn-primary btn-block rounded-pill"
             type="file"
             @change="onFileSelected"
             oninput="pic.src=window.URL.createObjectURL(this.files[0])" />
@@ -27,15 +27,15 @@
           </div><br>
 
           <!-- Agregar imagen -->
-          <button class="btn btn-success btn-block" @click="onUpload">
-            Agregar Imagen
+          <button class="btn btn-success btn-block rounded-pill" @click="onUpload">
+            <b>Agregar Imagen</b>
           </button>
           
 
           <br />
           <!--  MOSTRAR IMAGENES -->
-          <li class="btn btn-warning font-weight-bolder btn-block">
-            <router-link to="/Home"> MOSTRAR IMAGENES </router-link>
+          <li class="btn btn-warning font-weight-bolder btn-block rounded-pill">
+            <router-link to="/Home" id="nourl"> <b>MOSTRAR IMAGENES</b> </router-link>
           </li>
         </div>
       </div>
@@ -72,6 +72,13 @@ export default {
 </script>
 
 <style>
+b {
+  color: rgb(0, 0, 0);
+}
+
+#nourl{
+text-decoration: none;
+}
 .preview {
   display: flex;
   justify-content: center;
