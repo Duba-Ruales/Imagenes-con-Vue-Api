@@ -1,22 +1,17 @@
 <template>
-  <nav
-    class="navbar navbar-expand-lg navbar-light color scrolling-navbar fixed-top bg-warning"
-  >
-    <div class="container m-4 font-weight-bolder "></div>
-  </nav>
-
-  <div class="container  ">
+    <br><br><br>
+  <div class="container rounded" id="transparente">
     <div class="container mt-5 ">
       <div class="row">
-        <div class="col-12">
-          <br />
-          <h2 class="text-center mt-5"><b> MENÚ PRINCIPAL </b></h2>
+        <div class="col-12 ">
+          <br>
+          <h2 class="text-center "><b> MENÚ PRINCIPAL </b></h2>
           <hr />
 
 
           <!-- Seleccionar imagen de Desktop  -->
-          <span class="btn btn-primary btn-file btn-block rounded-pill mb-2">
-            <i style='font-size:24px' class='fas'>&#xf382;</i>&nbsp; <!-- Icono de selecion imagen -->
+          <span class="btn btn-primary btn-file btn-block rounded-pill mb-3">
+            <i id="icontamanio" class='fas'>&#xf382;</i>&nbsp; <!-- Icono de selecion imagen -->
             <b>SELECCIONAR IMAGEN</b> 
             <input
             class="btn btn-primary btn-block "
@@ -41,16 +36,16 @@
             @click="onUpload"
           >
           <!-- <i class="material-icons">&#xe39d;</i> --> 
-          <i class="material-icons " style='font-size:24px'>&#xe439;</i> &nbsp; <!-- icomo de add imagenes -->
+          <i class="material-icons ">&#xe439;</i> &nbsp; <!-- icomo de add imagenes -->
             <b> AGREGAR IMAGEN</b>
           </button>
 
           <br>
           <!--  MOSTRAR IMAGENES -->
-          <li class="btn btn-warning font-weight-bolder btn-block rounded-pill">
+          <li class="btn btn-warning font-weight-bolder btn-block rounded-pill mb-4">
             <router-link to="/Home" id="nourl">
             <!-- <i class="material-icons">&#xe413;</i> -->
-            <i class="material-icons " style='font-size:24px'>&#xe3b6;</i> &nbsp;<!-- icomo de imagenes -->
+            <i class="material-icons " >&#xe3b6;</i> &nbsp;<!-- icomo de imagenes -->
               <b>MOSTRAR IMAGENES</b>
             </router-link>
           </li>
@@ -60,6 +55,7 @@
 
     <!-- ROW 2 -->
   </div>
+
 </template>
 
 <script>
@@ -112,12 +108,19 @@ export default {
 
 /* Color de letra de hipervinculo y URL */
 b {
-  color: rgb(17, 17, 17);
+  color: rgb(0, 0, 0);
+}
+strong {
+  color: rgb(255, 255, 255);
 }
 i {
   color: rgb(255, 255, 255);
 }
-
+/* tamaño de iconos menu */
+#icontamanio{
+  font-size:24px
+}
+/* quitar hiperbinculo subrayado */
 #nourl {
   text-decoration: none;
 }
@@ -129,8 +132,8 @@ i {
 }
 
 .preview img {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 260px;
+  max-height: 200px;
 }
 
 html,
@@ -140,13 +143,16 @@ body {
   padding: 0;
 }
 body {
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  /* min-height: 100vh; */
-  background: #c5ccdd;
   font-family: sans-serif;
+  background-image: url("https://i.pinimg.com/originals/d7/98/ef/d798efcf582e269a9060e2500fc27494.jpg");
+}
+#transparente{
+  background: #dddddd67;
+}
+#transparenteb{
+  background: #000000fa;
 }
 </style>

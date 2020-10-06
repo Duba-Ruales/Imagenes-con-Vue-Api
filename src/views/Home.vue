@@ -1,19 +1,18 @@
 /* etiqueta 1 */
 <template>
 <nav
-    class="navbar navbar-expand-lg navbar-light color scrolling-navbar fixed-top bg-warning"
-  >
+    class="navbar fixed-top " id="transparenteb" >
     <div class="container m-2 font-weight-bolder ">
-        <router-link to="/" id="nourl"> <h5> <b>VOLVER</b> </h5> </router-link>
+        <router-link to="/" id="nourl"> <h6> <strong>VOLVER</strong> </h6> </router-link>
     </div>
   </nav>
 
   
-  <div class="container-fluit mx-5 bg-dangewsr">
+  <div class="container-fluit mx-5 ">
     <!-- ROW 1 -->
     <div class="row">
-      <div class="col-12 mt-5"> <br><br>
-        <h2 class="text-center"> <b>CENTRO DE IMAGENES </b> </h2> <hr>
+      <div class="col-12 mt-5"> <br>
+        <h2 class="text-center"> <b> IMAGENES </b> </h2> <hr>
       </div>
     </div>
 
@@ -27,10 +26,7 @@
     
   </div>
 
-  <!-- PIE DE PAGINA AMARILLO -->
-  <footer class="bg-warning text-center mt-3">
-      <b> Visualizacion de imagenes subidas a <em>https://api.jeisontech.dev/api/images</em> </b>
-    </footer>
+  
 </template>
 
 /* etiqueta 2 */
@@ -58,18 +54,6 @@ export default {
   },
 
 
-  /* beforeCreate(){
-    console.log("beforeCreate")
-  },
-  created(){
-    console.log("Created")
-  },
-  beforeMount(){
-    console.log("beforeMount")
-  },
-  mounted(){
-    console.log("mounted")
-  } */
   
 };
 </script>
@@ -78,17 +62,17 @@ export default {
 <style>
 #nourl{
 text-decoration: none;
-}
-h1 {
-  font-size: 25px; /* tamaño de texto imagenes */
+color: rgb(245, 245, 245);
 }
 
 h1 {
   background-color: rgba(0, 0, 0, 0.781);
   color: white;
+  font-size: 25px; /* tamaño de texto imagenes */
 }
 h5 {
-  color: rgb(0, 0, 0);
+  color: rgb(17, 17, 17);
 }
+
 
 </style>
