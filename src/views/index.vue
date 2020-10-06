@@ -9,33 +9,50 @@
     <div class="container mt-5 ">
       <div class="row">
         <div class="col-12">
-          <br>
-          <h2 class="text-center mt-5"> <b> MENÚ PRINCIPAL </b> </h2><hr>
+          <br />
+          <h2 class="text-center mt-5"><b> MENÚ PRINCIPAL </b></h2>
+          <hr />
 
-    <!-- Seleccionar imagen de Desktop  -->
-          <input
-            class="btn btn-primary btn-block rounded-pill"
+
+          <!-- Seleccionar imagen de Desktop  -->
+          <span class="btn btn-primary btn-file btn-block rounded-pill mb-2">
+            <i style='font-size:24px' class='fas'>&#xf382;</i>&nbsp; <!-- Icono de selecion imagen -->
+            <b>SELECCIONAR IMAGEN</b> 
+            <input
+            class="btn btn-primary btn-block "
             type="file"
             @change="onFileSelected"
-            oninput="pic.src=window.URL.createObjectURL(this.files[0])" />
-          <br>
-          
+            oninput="pic.src=window.URL.createObjectURL(this.files[0])"
+            
+          />
+          </span>
+
 
           <!-- Mostrar Previsuaizacion tañaño fijo -->
           <div class="preview">
             <img id="pic" />
-          </div><br>
+          </div>
+          <br />
+
 
           <!-- Agregar imagen -->
-          <button class="btn btn-success btn-block rounded-pill" @click="onUpload">
-            <b>Agregar Imagen</b>
+          <button
+            class="btn btn-success btn-block rounded-pill"
+            @click="onUpload"
+          >
+          <!-- <i class="material-icons">&#xe39d;</i> --> 
+          <i class="material-icons " style='font-size:24px'>&#xe439;</i> &nbsp; <!-- icomo de add imagenes -->
+            <b> AGREGAR IMAGEN</b>
           </button>
-          
 
-          <br />
+          <br>
           <!--  MOSTRAR IMAGENES -->
           <li class="btn btn-warning font-weight-bolder btn-block rounded-pill">
-            <router-link to="/Home" id="nourl"> <b>MOSTRAR IMAGENES</b> </router-link>
+            <router-link to="/Home" id="nourl">
+            <!-- <i class="material-icons">&#xe413;</i> -->
+            <i class="material-icons " style='font-size:24px'>&#xe3b6;</i> &nbsp;<!-- icomo de imagenes -->
+              <b>MOSTRAR IMAGENES</b>
+            </router-link>
           </li>
         </div>
       </div>
@@ -72,13 +89,39 @@ export default {
 </script>
 
 <style>
-b {
-  color: rgb(0, 0, 0);
+/* BOTON DE SELECCIONAR LAS IMAGENES */
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: rgb(255, 255, 255);
+  cursor: inherit;
+  display: block;
 }
 
-#nourl{
-text-decoration: none;
+/* Color de letra de hipervinculo y URL */
+b {
+  color: rgb(17, 17, 17);
 }
+i {
+  color: rgb(255, 255, 255);
+}
+
+#nourl {
+  text-decoration: none;
+}
+
 .preview {
   display: flex;
   justify-content: center;
@@ -96,8 +139,7 @@ body {
   margin: 0;
   padding: 0;
 }
-body{
- 
+body {
   margin: 0;
   padding: 0;
   display: flex;

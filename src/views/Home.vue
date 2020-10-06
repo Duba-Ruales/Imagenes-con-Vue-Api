@@ -4,7 +4,7 @@
     class="navbar navbar-expand-lg navbar-light color scrolling-navbar fixed-top bg-warning"
   >
     <div class="container m-2 font-weight-bolder ">
-      <router-link to="/" id="nourl"> <h5> <b>VOLVER</b> </h5> </router-link>
+        <router-link to="/" id="nourl"> <h5> <b>VOLVER</b> </h5> </router-link>
     </div>
   </nav>
 
@@ -29,7 +29,7 @@
 
   <!-- PIE DE PAGINA AMARILLO -->
   <footer class="bg-warning text-center mt-3">
-      <b> Visualizacion de imagenes subidas a <i>https://api.jeisontech.dev/api/images</i> </b>
+      <b> Visualizacion de imagenes subidas a <em>https://api.jeisontech.dev/api/images</em> </b>
     </footer>
 </template>
 
