@@ -1,27 +1,28 @@
 <template>
-    <br><br><br>
-  <div class="container rounded" id="transparente">
+  <br /><br /><br />
+  <div class="container rounded shadow-lg" id="transparente">
     <div class="container mt-5 ">
       <div class="row">
         <div class="col-12 ">
-          <br>
-          <h2 class="text-center "><b> MENÚ PRINCIPAL </b></h2>
+          <br />
+          <h2 class="text-center  "><b> MENÚ PRINCIPAL </b></h2>
           <hr />
 
-
           <!-- Seleccionar imagen de Desktop  -->
-          <span class="btn btn-primary btn-file btn-block rounded-pill mb-3">
-            <i id="icontamanio" class='fas'>&#xf382;</i>&nbsp; <!-- Icono de selecion imagen -->
-            <b>SELECCIONAR IMAGEN</b> 
+          <span class=" btn btn-primary btn-file btn-block rounded-pill mb-3">
+            <i id="icontamanio" class="fas">&#xf382;</i>&nbsp;
+            <!-- Icono de selecion imagen -->
+            <b>SELECCIONAR IMAGEN</b>
             <input
-            class="btn btn-primary btn-block "
-            type="file"
-            @change="onFileSelected"
-            oninput="pic.src=window.URL.createObjectURL(this.files[0])"
-            
-          />
+              class="btn btn-primary btn-block "
+              type="file"
+              @change="onFileSelected"
+              oninput="pic.src=window.URL.createObjectURL(this.files[0])"
+              accept="image/*"
+            />
           </span>
 
+          
 
           <!-- Mostrar Previsuaizacion tañaño fijo -->
           <div class="preview">
@@ -35,17 +36,21 @@
             class="btn btn-success btn-block rounded-pill"
             @click="onUpload"
           >
-          <!-- <i class="material-icons">&#xe39d;</i> --> 
-          <i class="material-icons ">&#xe439;</i> &nbsp; <!-- icomo de add imagenes -->
+            <!-- <i class="material-icons">&#xe39d;</i> -->
+            <i class="material-icons ">&#xe439;</i> &nbsp;
+            <!-- icomo de add imagenes -->
             <b> AGREGAR IMAGEN</b>
           </button>
 
-          <br>
+          <br />
           <!--  MOSTRAR IMAGENES -->
-          <li class="btn btn-warning font-weight-bolder btn-block rounded-pill mb-4">
+          <li
+            class="btn btn-warning font-weight-bolder btn-block rounded-pill mb-4"
+          >
             <router-link to="/Home" id="nourl">
-            <!-- <i class="material-icons">&#xe413;</i> -->
-            <i class="material-icons " >&#xe3b6;</i> &nbsp;<!-- icomo de imagenes -->
+              <!-- <i class="material-icons">&#xe413;</i> -->
+              <i class="material-icons ">&#xe3b6;</i>
+              &nbsp;<!-- icomo de imagenes -->
               <b>MOSTRAR IMAGENES</b>
             </router-link>
           </li>
@@ -55,7 +60,6 @@
 
     <!-- ROW 2 -->
   </div>
-
 </template>
 
 <script>
@@ -85,6 +89,7 @@ export default {
 </script>
 
 <style>
+
 /* BOTON DE SELECCIONAR LAS IMAGENES */
 .btn-file {
   position: relative;
@@ -117,8 +122,8 @@ i {
   color: rgb(255, 255, 255);
 }
 /* tamaño de iconos menu */
-#icontamanio{
-  font-size:24px
+#icontamanio {
+  font-size: 24px;
 }
 /* quitar hiperbinculo subrayado */
 #nourl {
@@ -149,10 +154,10 @@ body {
   font-family: sans-serif;
   background-image: url("https://i.pinimg.com/originals/d7/98/ef/d798efcf582e269a9060e2500fc27494.jpg");
 }
-#transparente{
-  background: #dddddd67;
+#transparente {
+  background: #dddddd46;
 }
-#transparenteb{
+#transparenteb {
   background: #000000fa;
 }
 </style>

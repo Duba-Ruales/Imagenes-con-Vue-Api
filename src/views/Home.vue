@@ -1,7 +1,7 @@
 /* etiqueta 1 */
 <template>
 <nav
-    class="navbar fixed-top " id="transparenteb" >
+    class="navbar fixed-top" id="transparenteb" >
     <div class="container m-2 font-weight-bolder ">
         <router-link to="/" id="nourl"> <h6> <strong>VOLVER</strong> </h6> </router-link>
     </div>
@@ -11,7 +11,7 @@
   <div class="container-fluit mx-5 ">
     <!-- ROW 1 -->
     <div class="row">
-      <div class="col-12 mt-5"> <br>
+      <div class="col-12 mt-5 "> <br>
         <h2 class="text-center"> <b> IMAGENES </b> </h2> <hr>
       </div>
     </div>
@@ -73,6 +73,4 @@ h1 {
 h5 {
   color: rgb(17, 17, 17);
 }
-
-
 </style>
